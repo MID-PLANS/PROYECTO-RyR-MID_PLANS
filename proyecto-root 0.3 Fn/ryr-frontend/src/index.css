@@ -1,0 +1,162 @@
+body { 
+  background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+  color: #222; 
+  margin: 0; 
+  padding: 0; 
+  min-height: 100vh;
+}
+#particles-js { 
+  position: fixed; 
+  width: 100%; 
+  height: 100vh; 
+  top: 0; 
+  left: 0; 
+  z-index: -1; 
+  background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%); 
+}
+
+.navbar { 
+  background: rgba(15, 15, 15, 0.85) !important; 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+  border-bottom: 1px solid rgba(255,255,255,0.05); 
+}
+.navbar-brand { color: #ffffff !important; }
+
+.card, .modal-content, .toast { 
+  background-color: rgba(255, 255, 255, 0.75) !important; 
+  backdrop-filter: blur(15px) !important; 
+  -webkit-backdrop-filter: blur(15px) !important; 
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.6) !important; 
+  border-radius: 16px; 
+}
+.user-card { border-top: 6px solid #F1B42F !important; } 
+
+.icon-header { 
+  width: 70px; height: 70px; 
+  background: linear-gradient(135deg, #9CCC65 0%, #7CB342 100%); 
+  color: #111; font-size: 2rem; display: inline-flex; 
+  align-items: center; justify-content: center; border-radius: 50%; 
+  margin-top: -35px; box-shadow: 0 4px 10px rgba(156, 204, 101, 0.4); 
+}
+
+.form-label { font-weight: 600; color: #1c1e26; font-size: 0.95rem; }
+.input-group-text { background-color: rgba(255, 255, 255, 0.5) !important; color: #7CB342; border-color: rgba(255, 255, 255, 0.5); }
+.form-control, .form-select { padding: 0.75rem 1rem; background-color: rgba(255, 255, 255, 0.5) !important; border-color: rgba(255, 255, 255, 0.5); color: #222; font-weight: 500; }
+.form-control:focus, .form-select:focus { border-color: #9CCC65; box-shadow: none; background-color: rgba(255, 255, 255, 0.9) !important; }
+
+.btn-primary { background: linear-gradient(135deg, #9CCC65 0%, #7CB342 100%) !important; color: #111 !important; border: none; font-weight: bold; }
+.btn-primary:hover, .btn-success:hover { background: linear-gradient(135deg, #8BC34A 0%, #689F38 100%) !important; transform: translateY(-2px); box-shadow: 0 0 15px rgba(156, 204, 101, 0.6) !important; color: #000 !important; }
+
+.table { --bs-table-bg: transparent; --bs-table-color: #222; }
+.table th { background-color: rgba(255, 255, 255, 0.4) !important; color: #1c1e26; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; border-bottom: 2px solid rgba(0,0,0,0.1); }
+.table-hover tbody tr:hover { background-color: rgba(255, 255, 255, 0.75) !important; }
+.badge { padding: 0.5em 0.7em; font-weight: 600; border-radius: 6px; color: #111; }
+.input-readonly { background-color: rgba(200, 200, 200, 0.4) !important; cursor: not-allowed; }
+
+.nav-pills .nav-link { color: #1c1e26; border-radius: 50rem; padding: 0.6rem 1.5rem; }
+.nav-pills .nav-link.active { background-color: #F1B42F !important; color: #111 !important; box-shadow: 0 4px 10px rgba(241, 180, 47, 0.4); }
+.bg-light { background-color: rgba(255, 255, 255, 0.4) !important; backdrop-filter: blur(5px); }
+
+.navbar-logo { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4)); transition: transform 0.3s ease; }
+.nav-divider { width: 2px; height: 35px; background: linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(255,255,255,0.3), rgba(255,255,255,0.05)); border-radius: 2px; }
+.inline-select { background-color: rgba(255,255,255,0.6) !important; border: 1px solid rgba(0,0,0,0.1); width: 115px; }
+
+.text-primary { color: #7CB342 !important; } 
+.text-info { color: #F1B42F !important; } 
+.border-primary { border-color: #7CB342 !important; }
+.border-info { border-color: #F1B42F !important; }
+.bg-purple { background-color: #8E24AA !important; color: #ffffff !important; border: 1px solid #AB47BC; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #7CB342; border-radius: 4px; }
+
+/* ADAPTACIÓN MÓVIL CON CSS GRID (IDÉNTICO AL ORIGINAL) */
+@media (max-width: 768px) {
+  .table-responsive table, .table-responsive thead, .table-responsive tbody, .table-responsive th, .table-responsive td, .table-responsive tr { display: block; width: 100%; }
+  .table-responsive thead tr { position: absolute; top: -9999px; left: -9999px; }
+  .table-responsive tr { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; background-color: rgba(255,255,255,0.88) !important; border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; margin-bottom: 1.5rem; padding: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .table-responsive td { display: flex; flex-direction: column; align-items: flex-start; text-align: left !important; border: none; padding: 4px 0 !important; }
+  .table-responsive td::before { content: attr(data-label); font-weight: 800; color: #7CB342; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .table-responsive td[data-label="Área"], .table-responsive td[data-label="Actividad"], .table-responsive td[data-label="Notas"], .table-responsive td[data-label="Solicitante"], .table-responsive td[data-label="Acciones"] { grid-column: span 2; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 8px !important; }
+  .table-responsive td .form-select, .table-responsive td .btn { width: 100%; margin-top: 2px; }
+  .table-responsive td[data-label="Acciones"] { border-bottom: none; padding-bottom: 0 !important; flex-direction: row; gap: 8px; justify-content: space-between; margin-top: 5px; }
+  .table-responsive td[data-label="Acciones"] .btn { flex: 1; margin-top: 0; }
+}
+
+/* ========================================== */
+/* PANTALLA DE CARGA (SPLASH SCREEN)          */
+/* ========================================== */
+#splash-screen { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100vh; 
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #262626 100%); 
+  z-index: 9999; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out; 
+}
+
+.splash-logo { font-size: 5rem; margin-bottom: 1rem; animation: float 3s ease-in-out infinite; color: #9CCC65 !important; } 
+.splash-title { font-size: 2rem; font-weight: 700; letter-spacing: 1px; animation: fadeInText 1.5s ease-out forwards; text-align: center; }
+.splash-subtitle { font-size: 1.1rem; font-weight: 300; color: #F1B42F; margin-top: 10px; opacity: 0; animation: fadeInText 1.5s ease-out 0.5s forwards; text-align: center;} 
+.spinner-grow-custom { width: 1.5rem; height: 1.5rem; color: #9CCC65; margin-top: 2rem; background-color: #9CCC65; }
+
+@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+@keyframes fadeInText { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Animación para cuando la app principal aparece */
+.fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Estilo de Marca de Registro original de Emanuel */
+.cert-text { 
+  font-size: 0.85rem; 
+  font-weight: 600; 
+  color: rgba(255, 255, 255, 0.5); 
+  letter-spacing: 1px; 
+  user-select: none; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+  cursor: default; 
+}
+.cert-text:hover { 
+  color: #9CCC65; 
+  transform: scale(1.05); 
+}
+
+
+/* 1. Anulamos el bloqueo del cuerpo (por si acaso quedó atrapado) */
+body {
+  overflow: auto !important;
+}
+
+/* 2. Destruimos el "efecto jaula" que dejaba la animación de entrada */
+.fade-in-up {
+  transform: none !important;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Scrollbar personalizado para el Kanban */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
